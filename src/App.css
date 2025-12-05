@@ -1,0 +1,238 @@
+.appContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
+  padding: 50px 20px;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 2.8em;
+  color: #1a252f;
+  margin: 0 0 50px 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.formWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectionCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  border: 1px solid #f0f2f5;
+}
+
+.sectionCard:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sectionHeader:hover {
+  background: linear-gradient(135deg, #1f618d 0%, #2980b9 100%);
+  padding-left: 34px;
+}
+
+.sectionTitle {
+  font-size: 1.35em;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.2px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.toggleArrow {
+  font-size: 1.3em;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.sectionContent {
+  padding: 32px 28px;
+  border-top: 2px solid #f0f2f5;
+  animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 1500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .appContainer {
+    padding: 30px 15px;
+  }
+
+  .pageTitle {
+    font-size: 2em;
+    margin-bottom: 35px;
+  }
+
+  .formWrapper {
+    gap: 16px;
+  }
+
+  .sectionHeader {
+    padding: 18px 20px;
+  }
+
+  .sectionContent {
+    padding: 24px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 1.15em;
+  }
+}
+
+@media (max-width: 480px) {
+  .appContainer {
+    padding: 20px 10px;
+  }
+
+  .pageTitle {
+    font-size: 1.6em;
+    margin-bottom: 25px;
+  }
+
+  .formWrapper {
+    gap: 12px;
+  }
+
+  .sectionHeader {
+    padding: 16px 16px;
+  }
+
+  .sectionHeader:hover {
+    padding-left: 20px;
+  }
+
+  .sectionContent {
+    padding: 20px 16px;
+  }
+
+.sectionTitle {
+    font-size: 1em;
+  }
+}
+
+.confirmWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.confirmCard {
+  max-width: 720px;
+  padding: 48px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.confirmTitle {
+  font-size: 2.4rem;
+  margin: 0;
+  color: #1a252f;
+}
+
+.confirmSubtitle {
+  color: #556;
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.confirmActions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.confirmButton {
+  padding: 12px 28px;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 0 28px;
+}
+
+.formActions button {
+  padding: 12px 28px;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+  color: white;
+}
+
+.btnPrimary:hover {
+  background: linear-gradient(135deg, #1f618d 0%, #2980b9 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(41, 128, 185, 0.3);
+}
+
+.btnPrimary:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .formActions {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formActions {
+    flex-direction: column-reverse;
+    padding: 0 16px;
+    margin-top: 16px;
+  }
+
+  .formActions button {
+    width: 100%;
+  }
+}
